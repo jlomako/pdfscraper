@@ -1,9 +1,14 @@
 name: pdfscraper
 
-# set timer when script will run (12am local time) or on push
+# set timer when script will run (17 utc = 1pm local time) or on push
 on:
-  push:
-    branches: main
+  schedule:
+  - cron: 0 17 * * *
+  
+# run script on push
+# on:
+#   push:
+#     branches: main
 
 jobs: 
   pdfscrape:
