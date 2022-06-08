@@ -1,5 +1,7 @@
 # pdfscraper
 pdfscraper that extracts pdf and saves data to csv 
+<br>
+runs every day around 1pm (17 utc)  
 
 [![pdfscraper](https://github.com/jlomako/pdfscraper/actions/workflows/main.yml/badge.svg)](https://github.com/jlomako/pdfscraper/actions/workflows/main.yml)
 
