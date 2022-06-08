@@ -5,11 +5,7 @@
 library(tidyverse)
 library(pdftools)
 
-# get file directly
 url <- "https://www.msss.gouv.qc.ca/professionnels/statistiques/documents/urgences/Rap_Quotid_SituatUrgence1.pdf"
-
-# use local copy for now:
-# url <- "pdf/Rap_Quotid_SituatUrgence1.pdf"
 
 # read pdf
 text_pdf <- pdf_text(url) 
@@ -20,7 +16,7 @@ text_pdf <- text_pdf[[7]]
 # get rows from pdf
 by_row_pdf <- str_split(text_pdf, pattern = "\n")
 
-# get date and time
+# get last update and time
 update <- by_row_pdf[[1]][4]
 update1 <- by_row_pdf[[1]][53]
 
