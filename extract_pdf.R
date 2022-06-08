@@ -94,4 +94,6 @@ write.csv(df_7days, file = "data/last7days.csv", row.names = FALSE)
 daily <- df %>% select(hospital_name = X1, occupancy_rate = X45) %>%
   mutate(Date = as.character(Sys.Date())) %>%
   pivot_wider(names_from=hospital_name, values_from=occupancy_rate)
-write.csv(daily, file = "data/daily_data.csv", row.names = FALSE)
+# write.csv(daily, file = "data/daily_data.csv", row.names = FALSE)
+write.table(daily, "data/daily_data.csv", append = T, row.names = F, col.names = F, sep = ",")
+
