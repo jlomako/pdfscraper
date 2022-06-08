@@ -62,6 +62,36 @@ for (j in 1:length(rows)) {
   }
 }
 
-write.csv(df, file = "data/test.csv", row.names = FALSE)
+# rename hospital names
+df$X1[1] <- "Institut universitaire de santé mentale de Montréal"
+df$X1[5] <- "Hôpital du Sacré-Coeur de Montréal"
+df$X1[8] <- "Centre hospitalier de l'université de Montréal"
+df$X1[13] <- "Hôpital général juif Sir Mortimer B. Davis"
 
-# to do: rename/ reshape columns etc
+# write data to csv files
+
+###################################
+# write complete table to csv 
+write.csv(df, file = "data/table_all.csv", row.names = FALSE)
+
+###################################
+# write last 7 days to csv
+df_7days <- data.frame(matrix(ncol = 22, nrow = 0))
+days <- 0
+for (k in 1:7) {
+  row <- df %>% select(hospital_name = X1, occupancy_rate = paste0("X",39+days)) %>%
+    pivot_wider(names_from=hospital_name, values_from=occupancy_rate)
+  df_7days[k,] <- data.frame(as.character(Sys.Date()-6+days), row)
+  # print(row)
+  days = days + 1
+}
+names(df_7days) <- names(c("Date",row)) # replace column names, "Date" doesn't show?
+names(df_7days)[1] <- "Date"
+write.csv(df_7days, file = "data/last7days.csv", row.names = FALSE)
+
+###################################
+# write only today's occupation rate (column 45) to file
+daily <- df %>% select(hospital_name = X1, occupancy_rate = X45) %>%
+  mutate(Date = as.character(Sys.Date())) %>%
+  pivot_wider(names_from=hospital_name, values_from=occupancy_rate)
+write.csv(daily, file = "data/daily_data.csv", row.names = FALSE)
