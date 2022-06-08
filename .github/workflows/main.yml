@@ -1,0 +1,42 @@
+name: pdfscraper
+
+# set timer when script will run (12am local time) or on push
+on:
+  push:
+    branches: main
+
+jobs: 
+  pdfscrape:
+    # run macos-10.15 needed for pdftools 
+    runs-on: macos-10.15
+
+    # load repo and install R
+    steps:
+    - uses: actions/checkout@master
+    - uses: r-lib/actions/setup-r@master
+
+    # install xquartz for macos => needed for pdftools
+    - name: install XQuartz
+      run: brew install xquartz --cask
+
+    # Set-up R 
+    - name: install R packages
+      run: |
+        R -e 'install.packages("pdftools")'
+        R -e 'install.packages("tidyverse")'
+
+    # Run R script
+    - name: run R script
+      run: Rscript extract_pdf.R
+      
+ # Add new file in data folder, commit along with other modified files, push
+    - name: commit files
+      run: |
+        git config --local user.name actions-user
+        git config --local user.email "actions@github.com"
+        git add data/*
+        git commit -am "Scheduled Github Action on $(date)"
+        git push origin main
+      env:
+        REPO_KEY: ${{secrets.GITHUB_TOKEN}}
+        username: github-actions
