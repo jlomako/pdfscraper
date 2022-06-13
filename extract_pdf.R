@@ -107,7 +107,7 @@ df_7days %>%
   theme(axis.text.x = element_text(angle = 90), 
     panel.grid.major.x = element_blank(), # remove vertical grid lines
     panel.grid.major.y = element_line()) + # set horizontal lines only
-  labs(caption = paste("\nlast update: ", update), x = NULL, y = NULL) 
+  labs(caption = paste("\nlast update:", update), x = NULL, y = NULL) 
 
 # save output
 ggsave("img/last7days.png", width = 4, height = 4)
