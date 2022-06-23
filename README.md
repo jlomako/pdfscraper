@@ -12,3 +12,7 @@ runs every day around 1pm (17 utc)
 <br><br>
 ## Occupancy rates in Montreal emergency rooms (last 7 days)
 <img src = "img/last7days.png" width=500 />
+
+
+<br><br>
+<a href = "data/last7days.csv">last 7 days
