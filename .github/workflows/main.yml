@@ -1,19 +1,20 @@
 name: pdfscraper
 
 # set timer when script will run (17 utc = 1pm local time) or on push
-on:
-  schedule:
-  - cron: 0 17 * * *
+#on:
+#  schedule:
+#  - cron: 0 17 * * *
   
 # run script on push
-# on:
-#  push:
-#    branches: main
+on:
+  push:
+    branches: 
+      - main
 
 jobs: 
   pdfscrape:
     # run macos-10.15 needed for pdftools 
-    runs-on: macos-10.15
+    runs-on: macos-11
 
     # load repo and install R
     steps:
