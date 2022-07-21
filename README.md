@@ -6,7 +6,7 @@ runs every day around 1pm (17 utc)
 [![pdfscraper](https://github.com/jlomako/pdfscraper/actions/workflows/main.yml/badge.svg)](https://github.com/jlomako/pdfscraper/actions/workflows/main.yml)
 <br><br>
 
-## Go to shiny app here to explore data over time:
+## Go to shiny app to explore data over time:
 
 <a href = "https://jlomako.shinyapps.io/occupancy_app/">https://jlomako.shinyapps.io/occupancy_app/</a>
 <br><br>
