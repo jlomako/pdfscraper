@@ -1,7 +1,7 @@
 # pdfscraper
 * pdfscraper that extracts table in pdf and saves data to csv 
 * runs every day around 1pm (17 utc)
-* currently runs as backup in case GH action for data collection for
+* currently runs as backup in case data collection for
 <a href = "https://jlomako.shinyapps.io/occupancy_app/">hospital tracker</a>
 fails
 <br><br>
