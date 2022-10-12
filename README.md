@@ -17,4 +17,4 @@ fails
 * ggplot stopped working and has been de-activated until i find a solution
 * disabled old workflow and created new yml file with v2
 * OBS! yml needs renv.lock file in directory to load packages (still runs on macos-11, ubuntu not working)
-* ggplot2 should work again
+* ggplot2 working again :)
