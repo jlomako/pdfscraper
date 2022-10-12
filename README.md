@@ -2,7 +2,7 @@
 * pdfscraper that extracts table from pdf and saves data to csv 
 * runs every day around 1pm local time 
 * currently runs as backup in case data collection for
-<a href = "https://jlomako.shinyapps.io/occupancy_app/">hospital tracker</a>
+<a href = "https://github.com/jlomako/hospital-occupancy-tracker">hospital-occupancy-tracker</a>
 fails
 <br><br>
 
