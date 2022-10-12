@@ -1,4 +1,5 @@
-name: pdfscraper
+name: OLD pdfscraper
+# old script - only for reference - script will stop working eventually
 
 # set timer when script will run (17 utc = 1pm local time) or on push
 on:
