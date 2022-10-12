@@ -6,7 +6,7 @@
 fails
 <br><br>
 
-[![pdfscraper](https://github.com/jlomako/pdfscraper/actions/workflows/main.yml/badge.svg)](https://github.com/jlomako/pdfscraper/actions/workflows/main.yml)
+[![pdfscraper](https://github.com/jlomako/pdfscraper/actions/workflows/pdfscraperV2.yml/badge.svg)](https://github.com/jlomako/pdfscraper/actions/workflows/pdfscraperV2.yml)
 <br><br>
 
 
