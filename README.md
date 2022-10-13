@@ -1,10 +1,8 @@
 # pdfscraper
-* pdfscraper that extracts table from pdf and saves data to csv 
-* runs every day around 1pm local time 
-* currently runs as backup in case data collection for
-<a href = "https://github.com/jlomako/hospital-occupancy-tracker">hospital-occupancy-tracker</a>
-fails
-<br><br>
+A bot that extracts a table from pdf and saves data to csv. It runs every day around noon local time. Currently, it runs as backup in case data collection for <a href = "https://github.com/jlomako/hospital-occupancy-tracker">hospital-occupancy-tracker</a>
+fails.
+
+<br>
 
 [![pdfscraper](https://github.com/jlomako/pdfscraper/actions/workflows/pdfscraperV2.yml/badge.svg)](https://github.com/jlomako/pdfscraper/actions/workflows/pdfscraperV2.yml)
 <br><br>
