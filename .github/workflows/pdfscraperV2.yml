@@ -4,15 +4,15 @@ name: pdfscraper
 ## !!! renv.lock file must be in directory !!!
 
 ## script will run around 1pm local time
-#on:
-#  schedule:
-#  - cron: 0 17 * * *
+on:
+  schedule:
+  - cron: 0 17 * * *
   
 ## run script on push
-on:
-  push:
-    branches: 
-      - main
+#on:
+#  push:
+#    branches: 
+#      - main
 
 jobs:
   pdfscraper:
