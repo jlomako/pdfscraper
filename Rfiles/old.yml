@@ -32,7 +32,7 @@ jobs:
           
       # reads renv file for packages
       - uses: r-lib/actions/setup-renv@v2
-      - run: Rscript extract_pdf.R
+      - run: Rscript script.R
 
      # add file to data folder, commit, push
       - name: commit files
