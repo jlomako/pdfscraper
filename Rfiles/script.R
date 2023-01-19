@@ -97,20 +97,20 @@ daily <- df %>% select(hospital_name = X1, occupancy_rate = X45) %>%
 write.table(daily, "data/daily_data.csv", append = T, row.names = F, col.names = F, sep = ",")
 
 ###################################
-# plot last 7 days
-df_7days %>%
- select(Date, total = "Total Montréal") %>%
- mutate(total = as.numeric(total)) %>%
- # plot data
-  ggplot(aes(y=total, x=Date, fill=total)) + 
-  geom_col(position = "identity", size = 0.5, show.legend = F) +
-  geom_text(aes(label = paste0(total,"%")), vjust = 1.5, colour = "white", size = 3.5) +
-  theme_minimal() + 
-  scale_fill_gradient2(low = "light green", high = "red", mid = "yellow", midpoint = 80) +
-  theme(axis.text.x = element_text(angle = 90), 
-    panel.grid.major.x = element_blank(), # remove vertical grid lines
-    panel.grid.major.y = element_line()) + # set horizontal lines only
-  labs(caption = paste("\nlast update:", update), x = NULL, y = NULL) 
+## plot last 7 days
+# df_7days %>%
+# select(Date, total = "Total Montréal") %>%
+# mutate(total = as.numeric(total)) %>%
+## plot data
+#  ggplot(aes(y=total, x=Date, fill=total)) + 
+#  geom_col(position = "identity", size = 0.5, show.legend = F) +
+#  geom_text(aes(label = paste0(total,"%")), vjust = 1.5, colour = "white", size = 3.5) +
+#  theme_minimal() + 
+#  scale_fill_gradient2(low = "light green", high = "red", mid = "yellow", midpoint = 80) +
+#  theme(axis.text.x = element_text(angle = 90), 
+#    panel.grid.major.x = element_blank(), # remove vertical grid lines
+#    panel.grid.major.y = element_line()) + # set horizontal lines only
+#  labs(caption = paste("\nlast update:", update), x = NULL, y = NULL) 
 
-# save output
-ggsave("img/last7days.png", width = 4, height = 4)
+## save output
+# ggsave("img/last7days.png", width = 4, height = 4)
