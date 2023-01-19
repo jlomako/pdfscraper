@@ -1,5 +1,5 @@
 # pdfscraper
-A bot that extracts a table from pdf and saves data to csv. It runs every day around noon local time. Currently, it runs as backup in case data collection for <a href = "https://github.com/jlomako/hospital-occupancy-tracker">hospital-occupancy-tracker</a>
+A bot that extracts a table from a pdf file, processes the data and saves everything to a csv file. It runs every day around noon local time. Currently, it runs as backup in case data collection for <a href = "https://github.com/jlomako/hospital-occupancy-tracker">hospital-occupancy-tracker</a>
 fails.
 
 <br>
