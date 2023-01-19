@@ -1,11 +1,11 @@
 name: pdfscraper_py
 
-on: push
+# on: push
 
-# or set timer (runs at 17:25 utc)
-#on:
-#  schedule:
-#  - cron: 25 17 * * *
+## script will run around 1pm local time
+on:
+  schedule:
+  - cron: 0 17 * * *
 
 jobs:
   get-data-from-pdf:
