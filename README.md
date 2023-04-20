@@ -3,8 +3,8 @@ fails.
 <p>
 The first version of this bot was written in R and has been moved to <a href = "https://github.com/jlomako/pdfscraper-R">pdfscraper-R</a>
 
-
 <br>
 
 [![pdfscraper_py](https://github.com/jlomako/pdfscraper/actions/workflows/pdfscraper_py.yml/badge.svg)](https://github.com/jlomako/pdfscraper/actions/workflows/pdfscraper_py.yml)
 <br><br>
+failing because pdf has changed and doesn't inlcude Hopital General, Jewish, St. mary and cardiologie
